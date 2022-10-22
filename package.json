@@ -1,0 +1,23 @@
+{
+  "name": "web_devloper_bootcamp",
+  "version": "1.0.0",
+  "description": "Code along and practice for web developer bootcamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sas8254/web_devloper_bootcamp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sas8254/web_devloper_bootcamp/issues"
+  },
+  "homepage": "https://github.com/sas8254/web_devloper_bootcamp#readme",
+  "dependencies": {
+    "mongoose": "^6.6.7"
+  }
+}

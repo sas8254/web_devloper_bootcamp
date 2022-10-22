@@ -52,4 +52,6 @@ const addAddress = async (id) => {
   console.log(res);
 };
 
+// makeUser()
+
 addAddress("6353c8ad3acaf561dabcd044");

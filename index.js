@@ -1,25 +1,18 @@
-const bcrypt = require("bcrypt");
+const express = require("express");
+const app = express();
+const User = require("./models/user");
 
-// const hashPassword = async (pw) => {
-//   const salt = await bcrypt.genSalt(12);
-//   const hash = await bcrypt.hash(pw, salt);
-//   console.log(salt);
-//   console.log(hash);
-// };
+app.set("view engine", "ejs");
+app.set("views", "views");
 
-const hashPassword = async (pw) => {
-  const hash = await bcrypt.hash(pw, 12);
-  console.log(hash);
-};
+app.get("/register", (req, res) => {
+  res.render("register");
+});
 
-const login = async (pw, hashedPassword) => {
-  const result = await bcrypt.compare(pw, hashedPassword);
-  if (result) {
-    console.log("login sucessfully");
-  } else {
-    console.log("incorrect password");
-  }
-};
+app.get("/secret", (req, res) => {
+  res.send("This is Secret");
+});
 
-// hashPassword("monkey");
-login("monkey", "$2b$12$HBim9ltFZuz1p6j8e6U8R.UcrFslKNxlD6Wdg6TLpY1eB0Oom5u66");
+app.listen(3000, () => {
+  console.log("Serving on port 3000");
+});
